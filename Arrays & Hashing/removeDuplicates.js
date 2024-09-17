@@ -11,5 +11,25 @@ function removeDuplicate(nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]) {
 
   return nums.length;
 }
-console.log(removeDuplicate())
+// console.log(removeDuplicate());
 
+// two pointer method
+function removeDuplicateWithoutJSFunctions(
+  nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+) {
+  // nums[1]=nums[2]
+  if (nums.length === 0) {
+    return 0;
+  }
+
+  let i = 0;
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] !== nums[i]) {
+      nums[i + 1] = nums[j];
+      i++;
+    }
+  }
+  console.log(nums);
+  return i + 1;
+}
+console.log(removeDuplicateWithoutJSFunctions());
