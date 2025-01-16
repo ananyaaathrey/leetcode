@@ -24,3 +24,25 @@ const array = [64, 25, 12, 22, 11]
 console.log('Sorted array:', divide(array))
 // Time Complexity: O(n log n)
 // Space Complexity: O(n)
+
+// function divide(arr) {
+//   if (arr.length < 2) {
+//     return arr
+//   }
+//   const mid = Math.floor(arr.length / 2)
+//   const left = divide(arr.slice(0, mid))
+//   const right = divide(arr.slice(mid))
+//   return merge(left, right)
+// }
+
+// function merge(left, right) {
+//   const sortedArr = []
+//   while (left.length && right.length) {
+//     if (left[0] < right[0]) {
+//       sortedArr.push(left.shift())
+//     } else {
+//       sortedArr.push(right.shift())
+//     }
+//   }
+//   return [...sortedArr, ...left, ...right]
+// }

@@ -17,5 +17,5 @@ function quickSort(arr) {
 
 const array = [64, 25, 12, 22, 11]
 console.log('Sorted array:', quickSort(array))
-// Time Complexity: O(n log n)
+// Time Complexity: O(n log n) ; Worst Case: (O(n^2))
 // Space Complexity: O(n)
